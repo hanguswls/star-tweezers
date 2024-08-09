@@ -1,0 +1,9 @@
+.mobile-wrapper {
+  width: 430px;
+  height: 100%;
+  box-shadow: 0 0 5px #ccc;
+  border-radius: 30px;
+  margin: auto;
+  padding: 20px;
+  box-sizing: border-box;
+}
