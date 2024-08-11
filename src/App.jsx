@@ -2,6 +2,7 @@ import './App.css'
 import { Route, Routes } from 'react-router-dom'
 import useCurrentPath from './hooks/useCurrentPath';
 import Header from './components/Header/Header';
+import Footer from './components/Footer/Footer';
 
 function App() {
   const { currentPath } = useCurrentPath();
@@ -21,7 +22,6 @@ function App() {
             <Footer />
           ) : null
         }
-        
       </div>
     </>
   )

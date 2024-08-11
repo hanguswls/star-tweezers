@@ -1,3 +1,4 @@
+import './Header.css';
 import logoImage from '/logo.png';
 
 function Header() {

@@ -1,3 +1,4 @@
+import './Footer.css';
 import spinnerIcon from '/spinner_icon.png';
 
 function Footer(params) {
