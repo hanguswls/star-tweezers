@@ -7,6 +7,7 @@ import Main from './routes/Main';
 import Login from './routes/Login/Login';
 import OauthCallback from './routes/OauthCallback/OauthCallback';
 import Record from './routes/Record/Record';
+import Question from './routes/Question/Question';
 
 function App() {
   const { currentPath } = useCurrentPath();
@@ -21,6 +22,7 @@ function App() {
             <Route path="/login" element={<Login />} />
             <Route path="/oauth" element={<OauthCallback />} />
             <Route path="/record" element={<Record />} />
+            <Route path="/post/question" element={<Question />} />
             <Route path="*" element="페이지를 찾을 수 없습니다." />
           </Routes>
         </main>
