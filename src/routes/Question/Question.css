@@ -4,45 +4,6 @@
   gap: 20px;
 }
 
-.question-header {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.created-at {
-  font-size: 18px;
-  font-weight: 300;
-  color: #777777;
-  margin: 0;
-}
-
-.header-title, .header-description {
-  border: none;
-  margin: 0;
-  resize: none;
-  padding: 0;
-  text-align: left;
-  cursor: pointer;
-  overflow: hidden;
-}
-
-.header-title {
-  font-size: 28px;
-  font-weight: 700;
-}
-
-.header-description {
-  font-size: 14px;
-  font-weight: 400;
-  color: #777777;
-}
-
-.header-title:focus,
-.header-description:focus{
-  outline: none;
-}
-
 hr {
   border: 1px solid rgba(0, 0, 0, 0.25);
   width: 100%;
