@@ -4,6 +4,8 @@ import useCurrentPath from './hooks/useCurrentPath';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import Main from './routes/Main';
+import Login from './routes/Login/Login';
+import OauthCallback from './routes/OauthCallback/OauthCallback';
 
 function App() {
   const { currentPath } = useCurrentPath();
@@ -15,6 +17,8 @@ function App() {
         <main>
           <Routes>
             <Route path="/" element={<Main />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/oauth" element={<OauthCallback />} />
             <Route path="*" element="페이지를 찾을 수 없습니다." />
           </Routes>
         </main>

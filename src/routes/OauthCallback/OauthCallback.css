@@ -1,0 +1,16 @@
+.oauth-callback {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  color: #777777;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.big-spinner {
+  animation: spin 0.7s infinite linear;
+  height: 50px;
+  width: 50px;
+}
