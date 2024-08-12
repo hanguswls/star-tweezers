@@ -1,6 +1,10 @@
+import { useNavigate } from 'react-router-dom';
 import './Main.css';
+import SummaryItem from '../components/List/SummaryItem';
 
 function Main() {
+  const navigate = useNavigate();
+
   return (
     <div>
       <section className="profile-wrapper">
@@ -8,23 +12,14 @@ function Main() {
         <h2>홍길동님</h2>
       </section>
       <section className="summary-list-container">
-        <h3>나의 족집게 목록들(3개)</h3>
+        <h3>나의 족집게 목록들 (3개)</h3>
         <ul className="summary-list">
-          <li>
+          <li onClick={() => { navigate('/record') }}>
             + 새로운 정리 추가
           </li>
-          <li>
-            <h4>김재수 교수님의 특별 세미나김재수 교수님의 특별 세미나김재수 교수님의 특별 세미나</h4>
-            <p>핵심 요약 내용이 들어가는 공간인데 뭐라고 적어야할지 모르겠다. 핵심 요약 내용이 들어가는 공간인데 뭐라고 적어야할...</p>
-          </li>
-          <li>
-            <h4>김재수 교수님의 특별 세미나</h4>
-            <p>핵심 요약 내용이 들어가는 공간인데 뭐라고 적어야할지 모르겠다. 핵심 요약 내용이 들어가는 공간인데 뭐라고 적어야할...</p>
-          </li>
-          <li>
-            <h4>김재수 교수님의 특별 세미나</h4>
-            <p>핵심 요약 내용이 들어가는 공간인데 뭐라고 적어야할지 모르겠다. 핵심 요약 내용이 들어가는 공간인데 뭐라고 적어야할지 모르겠다.핵심 요약 내용이 들어가는 공간인데 뭐라고 적어야할지 모르겠다.핵심 요약 내용이 들어가는 공간인데 뭐라고 적어야할지 모르겠다.핵심 요약 내용이 들어가는 공간인데 뭐라고 적어야할...</p>
-          </li>
+          <SummaryItem />
+          <SummaryItem />
+          <SummaryItem />
         </ul>
       </section>
     </div>
