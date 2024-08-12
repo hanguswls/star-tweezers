@@ -17,9 +17,9 @@ function App() {
         <main>
           <Routes>
             <Route path="/" element={<Main />} />
-            <Route path="*" element="페이지를 찾을 수 없습니다." />
             <Route path="/login" element={<Login />} />
             <Route path="/oauth" element={<OauthCallback />} />
+            <Route path="*" element="페이지를 찾을 수 없습니다." />
           </Routes>
         </main>
         {

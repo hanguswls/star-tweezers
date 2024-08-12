@@ -45,8 +45,8 @@
 
 .kakao-btn img {
   display: block;
-  height: 45px;
-  width: auto;
+  width: 100%;
+  max-width: 300px;
   cursor: pointer;
 }
 
