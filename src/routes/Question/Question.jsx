@@ -3,18 +3,38 @@ import useQuestion from '../../hooks/useQuestion';
 import QuestionItem from '../../components/QuestionITem/QuestionItem';
 
 function Question() {
-  const { questions } = useQuestion();
+  const {
+    question,
+    titleRef,
+    descriptionRef,
+    handleTitleChange,
+    handleDescriptionChange,
+    handleUpdateTitle,
+    handleUpdateDescription
+  } = useQuestion();
 
   return (
     <main className='question'>
       <section className='question-header'>
-        <p className='created-at'>{questions.createdAt}</p>
-        <p className='header-title'>{questions.title}</p>
-        <p className='question-description'>{questions.description}</p>
+        <p className='created-at'>{question.createdAt}</p>
+        <textarea
+          ref={titleRef}
+          className='header-title'
+          value={question.title}
+          onChange={(e)=>handleTitleChange(e.target.value)}
+          onBlur={(e)=>handleUpdateTitle(e.target.value)}
+        />
+        <textarea
+          ref={descriptionRef}
+          className='header-description'
+          value={question.description}
+          onChange={(e)=>handleDescriptionChange(e.target.value)}
+          onBlur={(e)=>handleUpdateDescription(e.target.value)}
+        />
       </section>
       <hr />
       <section className='question-content-container'>
-        {questions.contents.map((q) => (
+        {question.contents.map((q) => (
           <QuestionItem
             key={q.id}
             id={q.id}

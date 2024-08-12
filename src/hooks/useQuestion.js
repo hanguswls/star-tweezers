@@ -1,9 +1,52 @@
+import { useState, useEffect, useRef } from 'react';
+
 function useQuestion() {
-  const questions = {
+  const titleRef = useRef(null);
+  const descriptionRef = useRef(null);
+  const [question, setQuestion] = useState({
+    createdAt: '',
+    title: '',
+    description: '',
+    contents: []
+  });
+
+  const adjustHeight = (textarea) => {
+    if (textarea) {
+      textarea.style.height = '0';
+      textarea.style.height = `${textarea.scrollHeight}px`;
+    }
+  };
+
+  const handleTitleChange = (newTitle) => {
+    setQuestion(prev => ({ ...prev, title: newTitle }));
+  };
+
+  const handleDescriptionChange = (newDescription) => {
+    setQuestion(prev => ({ ...prev, description: newDescription }));
+  };
+
+  const handleUpdateTitle = () => {
+    // 제목을 저장하는 로직. textarea가 focus out 되었을 때 실행됨
+  };
+
+  const handleUpdateDescription = () => {
+    // 설명을 저장하는 로직. textarea가 focus out 되었을 때 실행됨
+  };
+
+  useEffect(() => {
+    adjustHeight(titleRef.current);
+    adjustHeight(descriptionRef.current);
+  }, [question.title, question.description])
+
+  useEffect(()=>{
+    setQuestion(mock);
+    // API가 나오면, question 데이터를 가져오는 로직으로 수정하기
+  }, []);
+
+  const mock = {
     createdAt: "2024.08.12 14:44",
     title: "무선 네트워크와 핸드오프 이해하기",
-    description:
-      "무선 네트워크에서의 데이터 전송, 주소 지정, 그리고 핸드오프 과정에 대한 문제",
+    description: "무선 네트워크에서의 데이터 전송, 주소 지정, 그리고 핸드오프 과정에 대한 문제",
     contents: [
       {
         id: 1,
@@ -28,7 +71,15 @@ function useQuestion() {
     ],
   };
 
-  return { questions };
+  return {
+    question,
+    titleRef,
+    descriptionRef,
+    handleTitleChange,
+    handleDescriptionChange,
+    handleUpdateTitle,
+    handleUpdateDescription
+  };
 }
 
 export default useQuestion;
