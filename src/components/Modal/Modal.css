@@ -1,0 +1,50 @@
+.modal {
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.25);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  padding: 80px 140px;
+  background-color: white;
+  border-radius: 30px;
+}
+
+.status-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  color: #777777;
+  font-size: 14px;
+}
+
+.stop-btn {
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+.stop-btn img {
+  display: block;
+  cursor: pointer;
+  aspect-ratio: 1;
+  height: 45px;
+}
+
+.big-spinner {
+  animation: spin 0.7s infinite linear;
+  height: 50px;
+  width: 50px;
+}

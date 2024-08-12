@@ -1,0 +1,125 @@
+.record {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 150px 7px;
+}
+
+.record-content {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 8px;
+  padding: 8px 30px;
+}
+
+.record-title {
+  font-size: 26px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.record-description {
+  font-size: 14px;
+  font-weight: 300;
+  margin: 0;
+}
+
+.record-btns {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 8px;
+}
+
+.record-upload-btn {
+  color: white;
+  font-weight: 700;
+  font-size: 14px;
+  padding: 10px 15px;
+  background: #FFC107;
+  border-radius: 14px;
+  border: none;
+  cursor: pointer;
+}
+
+.record-btn, .stop-btn {
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+.record-btn img, .stop-btn img {
+  display: block;
+  cursor: pointer;
+  aspect-ratio: 1;
+}
+
+.record-btn img {
+  height: 70px;
+}
+
+.stop-btn img {
+  height: 45px;
+}
+
+.status-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  color: #777777;
+  font-size: 14px;
+}
+
+.big-spinner {
+  animation: spin 0.7s infinite linear;
+  height: 50px;
+  width: 50px;
+}
+
+@keyframes wave {
+  0%, 100% {
+    height: 10px;
+  }
+  50% {
+    height: 100%;
+  }
+}
+
+.sound-wave {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 35px;
+}
+
+.sound-wave div {
+  background: #FFC107;
+  width: 5px;
+  height: 20px;
+  margin: 0 2px;
+  border-radius: 8px;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-name: wave;
+}
+
+.box2 {
+  animation-delay: 0.1s;
+}
+
+.box3 {
+  animation-delay: 0.3s;
+}
+
+.box4 {
+  animation-delay: 0.5s;
+}
+
+.box5 {
+  animation-delay: 0.7s;
+}
