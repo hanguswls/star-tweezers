@@ -4,6 +4,7 @@ import stopBtn from '/stop_btn.png';
 import bigSpinnerIcon from '/spinner_icon_big.png';
 import Modal from '../../components/Modal/Modal';
 import useRecord from '../../hooks/useRecord';
+import SoundWave from '../../components/SoundWave/SoundWave';
 
 function Record() {
 
@@ -36,34 +37,20 @@ function Record() {
       </main>
       {
         isRecording && (
-          <Modal>
-            <div className='status-container'>
-              <div className='sound-wave'>
-                <div className='box1'></div>
-                <div className='box2'></div>
-                <div className='box3'></div>
-                <div className='box4'></div>
-                <div className='box5'></div>
-              </div>
-              <p>녹음중이에요...</p>
-            </div>
-            <button className='stop-btn' onClick={handleStopRecord}>
-              <img src={stopBtn} />
-            </button>
-          </Modal>
+          <Modal
+            figure={<SoundWave />}
+            message='녹음중이에요...'
+            onStopClick={handleStopRecord}
+          />
         )
       }
       {
         isAnalyzing && (
-          <Modal>
-            <div className='status-container'>
-              <img src={bigSpinnerIcon} className='big-spinner' />
-              <p>분석중이에요...</p>
-            </div>
-            <button className='stop-btn' onClick={handleStopAnalysis}>
-              <img src={stopBtn} />
-            </button>
-          </Modal>
+          <Modal
+            figure={<img src={bigSpinnerIcon} className='big-spinner' />}
+            message='분석중이에요...'
+            onStopClick={handleStopAnalysis}
+          />
         )
       }
   </>

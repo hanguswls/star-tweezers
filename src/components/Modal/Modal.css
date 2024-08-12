@@ -1,6 +1,6 @@
 .modal {
   position: fixed;
-  z-index: 1;
+  z-index: 1000;
   left: 0;
   top: 0;
   width: 100%;
@@ -19,4 +19,26 @@
   padding: 80px 100px;
   background-color: white;
   border-radius: 30px;
+}
+
+.status-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  color: #777777;
+  font-size: 14px;
+}
+
+.stop-btn {
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+.stop-btn img {
+  display: block;
+  cursor: pointer;
+  aspect-ratio: 1;
+  height: 45px;
 }
