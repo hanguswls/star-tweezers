@@ -1,0 +1,57 @@
+.login {
+  color: #484040;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-logo {
+  width: 90px;
+  height: 90px;
+}
+
+.login-content {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  text-align: center;
+}
+
+.login-title p {
+  font-size: 34px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.login-subtitle {
+  font-size: 18px;
+  font-weight: 500;
+  margin: 0;
+}
+
+.login-btns {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.kakao-btn, .inquiry-btn {
+  border: none;
+  background: none;
+  padding: 0;
+}
+
+.kakao-btn img {
+  display: block;
+  height: 45px;
+  width: auto;
+  cursor: pointer;
+}
+
+.inquiry-btn span {
+  font-size: 14px;
+  font-weight: 300;
+  cursor: pointer;
+}
