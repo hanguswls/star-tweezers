@@ -2,11 +2,11 @@ html,
 body {
   margin: 0;
   height: 100dvh;
-  box-sizing: border-box;
 }
 
 * {
   font-family: "Noto Sans KR", sans-serif;
+  box-sizing: border-box;
 }
 
 #root {
@@ -15,5 +15,4 @@ body {
   align-items: center;
   padding: 20px;
   height: 100%;
-  box-sizing: border-box;
 }
