@@ -11,6 +11,6 @@
 
 .big-spinner {
   animation: spin 0.7s infinite linear;
-  height: 80px;
-  width: 80px;
+  height: 50px;
+  width: 50px;
 }
