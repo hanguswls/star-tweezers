@@ -1,0 +1,38 @@
+.headline {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.created-at {
+  font-size: 18px;
+  font-weight: 300;
+  color: #777777;
+  margin: 0;
+}
+
+.headline-title, .headline-description {
+  border: none;
+  margin: 0;
+  resize: none;
+  padding: 0;
+  text-align: left;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.headline-title {
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.headline-description {
+  font-size: 14px;
+  font-weight: 400;
+  color: #777777;
+}
+
+.headline-title:focus,
+.headline-description:focus{
+  outline: none;
+}
