@@ -15,8 +15,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 80px;
-  padding: 80px 100px;
+  gap: 40px;
+  padding: 80px 140px;
   background-color: white;
   border-radius: 30px;
 }
@@ -41,4 +41,10 @@
   cursor: pointer;
   aspect-ratio: 1;
   height: 45px;
+}
+
+.big-spinner {
+  animation: spin 0.7s infinite linear;
+  height: 50px;
+  width: 50px;
 }

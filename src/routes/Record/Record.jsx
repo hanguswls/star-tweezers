@@ -1,10 +1,7 @@
 import './Record.css';
 import recordBtn from '/record_btn.png';
-import stopBtn from '/stop_btn.png';
-import bigSpinnerIcon from '/spinner_icon_big.png';
 import Modal from '../../components/Modal/Modal';
 import useRecord from '../../hooks/useRecord';
-import SoundWave from '../../components/SoundWave/SoundWave';
 
 function Record() {
 
@@ -13,7 +10,6 @@ function Record() {
     isAnalyzing,
     handleStartRecord,
     handleStopRecord,
-    handleStopAnalysis
   } = useRecord();
 
   return (
@@ -38,18 +34,17 @@ function Record() {
       {
         isRecording && (
           <Modal
-            figure={<SoundWave />}
+            type='record'
             message='녹음중이에요...'
-            onStopClick={handleStopRecord}
+            handleStopRecord={handleStopRecord}
           />
         )
       }
       {
         isAnalyzing && (
           <Modal
-            figure={<img src={bigSpinnerIcon} className='big-spinner' />}
+            type='analysis'
             message='분석중이에요...'
-            onStopClick={handleStopAnalysis}
           />
         )
       }

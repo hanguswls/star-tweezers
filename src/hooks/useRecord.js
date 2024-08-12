@@ -13,16 +13,13 @@ function useRecord() {
     setIsAnalyzing(true);
   }
 
-  const handleStopAnalysis = () => {
-    setIsAnalyzing(false);
-  }
+  // 분석이 멈추면 setIsAnalyzing(false)하는 코드 필요
 
   return {
     isRecording,
     isAnalyzing,
     handleStartRecord,
     handleStopRecord,
-    handleStopAnalysis
   }
 }
 
