@@ -1,20 +1,18 @@
 import { useState, useEffect, useRef } from 'react';
-import useSummary from './useSummary';
 
 function useHeadline() {
   const titleRef = useRef(null);
   const descriptionRef = useRef(null);
-  const { summaries } = useSummary();
   const [headline, setHeadline] = useState({
-    createdAt: summaries.createdAt,
-    title: summaries.title,
-    description: summaries.description,
+    createdAt: '',
+    title: '',
+    description: '',
   });
 
   const adjustHeight = (textarea) => {
     if (textarea) {
       textarea.style.height = '0';
-      textarea.style.height = `${textarea.scrollHeight}px`;
+      textarea.style.height = `${textarea.scrollHeight+2}px`;
     }
   };
 
