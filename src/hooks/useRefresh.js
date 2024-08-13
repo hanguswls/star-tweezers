@@ -27,3 +27,5 @@ function useRefresh() {
     }
   }, [cookies]);
 }
+
+export default useRefresh;
