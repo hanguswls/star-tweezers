@@ -1,13 +1,14 @@
 import { useEffect } from "react";
 import { useCookies } from "react-cookie";
 import { patchRefresh } from "../apis/authApi";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 function useRefresh() {
   const [cookies, setCookie, removeCookie] = useCookies(['accessToken', 'refreshToken']);
   const navigate = useNavigate();
   const accessTime = 2 * 60 * 60 * 1000;
   const refreshTime = 7 * 24 * 60 * 60 * 1000;
+  const location = useLocation();
 
   useEffect(() => {
     if (!cookies.accessToken && cookies.refreshToken) {
@@ -25,7 +26,7 @@ function useRefresh() {
       alert('로그인 후 이용 가능합니다.');
       navigate('/login');
     }
-  }, [cookies]);
+  }, [cookies, location]);
 }
 
 export default useRefresh;
