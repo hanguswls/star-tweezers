@@ -25,3 +25,5 @@ function useLogin() {
     }
   }, [cookies])
 }
+
+export default useLogin;
