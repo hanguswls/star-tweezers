@@ -1,12 +1,11 @@
 import './Summary.css';
 import useSummary from '../../hooks/useSummary';
-import SummaryContent from '../../components/SummaryContent/SummaryContent';
 import Headline from '../../components/Headline/Headline'
 import useHeadline from '../../hooks/useHeadline';
 
 function Summary(id) {
   const { headline } = useHeadline(id);
-  const htmlCode = useSummary(id);
+  const { htmlCode } = useSummary(id);
 
   return (
     <main className='summary'>
