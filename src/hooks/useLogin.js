@@ -17,6 +17,10 @@ function useLogin() {
       setCookie('accessToken', res.data.accessToken, { expires: new Date(Date.now() + accessTime), path: '/' })
       setCookie('refreshToken', res.data.refreshToken, { expires: new Date(Date.now() + refreshTime), path: '/' })
     })
+    .catch((err) => {
+      alert(err.message);
+      navigate('/login');
+    })
   }, [searchParams])
 
   useEffect(() => {
